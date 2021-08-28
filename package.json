@@ -1,0 +1,27 @@
+{
+  "name": "to-do-30-server",
+  "version": "1.0.0",
+  "description": "A server for the To-Do App 30-Day Challenge (todo30.com)",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ejw773/to-do-30-server.git"
+  },
+  "keywords": [
+    "#todo30"
+  ],
+  "author": "Elijah Wilcott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ejw773/to-do-30-server/issues"
+  },
+  "homepage": "https://github.com/ejw773/to-do-30-server#readme"
+}
