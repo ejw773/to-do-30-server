@@ -1,15 +1,19 @@
-var express = require('express');
-var app = express();
-var path = require('path');
+const express = require('express');
+const taskRouter = require('./routes/taskRouter');
 
-app.get('/', function (req, res) {
-    res.send('it works');
-});
+const app = express();
+app.use(express.json());
 
-app.get('/hello', function (req, res) {
-    res.send('hello there')
+app.use('/tasks', taskRouter);
+
+app.use(express.static(__dirname + '/public'));
+
+app.use((req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Content-Type', 'text/html');
+    res.end('<html><body><h1>Server for To-Do 30</h1></body></html>')
 })
 
 app.listen(process.env.PORT || 4000, function () {
-    console.log('Node app is working!');
+    console.log('Server running');
 });
